@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Listen for Xdebug (Apache)",
+            "type": "php",
+            "request": "launch",
+            "port": 8080,
+            "pathMappings": {
+                "/xampp/htdocs/project4thyear": "${workspaceFolder}/project4thyear"
+            },
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": ".*",
+                "uriFormat": "http://localhost:8080/project4thyear/home.php"
+            }
+            },
+        {
+            "name": "Launch built-in server and Profile",
+            "type": "php",
+            "request": "launch",
+            "noDebug": true,
+            "runtimeArgs": [
+                "-S",
+                "localhost:8080",
+                "-t",
+                "."
+            ],
+            "cwd": "${workspaceRoot}/.",
+            "serverReadyAction": {
+                "action": "openExternally"
+            },
+            "profile": true,
+            "openProfile": true
+        },
+        {
+            "name": "Listen for Xdebug",
+            "type": "php",
+            "request": "launch"
+        }
+    ]
+}

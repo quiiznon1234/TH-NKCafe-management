@@ -1,0 +1,116 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .logo {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type="text"],
+textarea {
+    border: 2px solid black;
+    padding: 6px;
+    font-size: 16px;
+    width: 300px;
+    border-radius: 9px;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    width: 160px;
+    height: 160px;
+    background-color: #eee;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 48px;
+    color: gray;
+    border: 2px dashed #ccc;
+}
+
+button[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}

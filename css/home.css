@@ -1,0 +1,169 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 999;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .logo {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: auto;
+    margin-top: 50px;
+}
+
+.grid-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-blend-mode: overlay;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.cover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.5; /* ปรับความโปร่งใสให้มองเห็นข้อความด้านหน้า */
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-item h2 {
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000;
+}
+
+.grid-item p {
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+footer {
+    padding: 10px 20px;
+}
+
+.contact {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animation สำหรับเด้งขึ้น */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-up {
+    opacity: 0;
+    animation: fadeSlideUp 0.8s ease forwards;
+}
+
+/* ใส่ delay เพื่อให้เด้งขึ้นทีละอัน */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+.delay-2 {
+    animation-delay: 0.3s;
+}
+.delay-3 {
+    animation-delay: 0.5s;
+}
+.delay-4 {
+    animation-delay: 0.7s;
+}
+

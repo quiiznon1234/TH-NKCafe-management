@@ -1,0 +1,10 @@
+{
+    "php.validate.executablePath": "C:/xampp/php/php.exe",
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "php.problems.exclude": {},
+    "intelephense.diagnostics.ignore": [
+    "PHP0406","PHP0419"
+],
+"php.debug.executablePath": "C:/xampp/php/php.exe"
+}

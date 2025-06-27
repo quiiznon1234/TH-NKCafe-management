@@ -1,0 +1,367 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 999;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .logo {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:before {
+    display: none;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    right: 0;
+    border-radius: 4px;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 0;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 60px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    color: black;
+    font-weight: bold;
+}
+
+.studio-slider {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: white;
+}
+
+.studio-container {
+    position: relative;
+    min-height: 600px; /* เปลี่ยนจาก height: 800px เป็น min-height */
+    width: 100%;
+}
+
+.studio-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%; /* เพิ่ม min-height */
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(100px) scale(0.95);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    overflow-y: auto; /* เพิ่มการ scroll ถ้าเนื้อหายาวเกินไป */
+}
+
+.studio-slide.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    pointer-events: all;
+    position: relative; /* เปลี่ยนเป็น relative เมื่อ active */
+}
+
+.studio-slide.prev {
+    transform: translateX(-100px) scale(0.95);
+}
+
+.studio-slide h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover {
+    transform: translateY(-2px);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 3px solid black;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+.studio-slide p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    color: #555;
+}
+
+.studio-slide p strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.divider {
+    width: 100%;
+    max-width: 600px;
+    height: 1px;
+    background: black;
+    margin: 12px 0;
+}
+
+.reserve-btn {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px 0; /* เพิ่ม margin ด้านบนและล่าง */
+    z-index: 10; /* เพิ่ม z-index */
+    position: relative; /* เพิ่ม position relative */
+}
+
+.reserve-btn:hover {
+    background-color: black;
+    color: white;
+    transform: translateY(-2px); /* เพิ่มเอฟเฟกต์ hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* เพิ่มเงา */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    color: black;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.arrow:hover {
+    background: black;
+    color: white;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.arrow.left {
+    left: -80px;
+}
+
+.arrow.right {
+    right: -80px;
+}
+
+.slide-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+    z-index: 10;
+    position: relative; /* เพิ่ม position relative */
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: black;
+    transform: scale(1.2);
+}
+
+.indicator:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* ปรับ container ให้ขยายตามเนื้อหา */
+.studio-slide.active ~ .studio-container,
+.studio-container:has(.studio-slide.active) {
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .arrow.left {
+        left: 10px;
+    }
+    
+    .arrow.right {
+        right: 10px;
+    }
+    
+    .studio-slide {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    .studio-slide h3 {
+        font-size: 24px;
+    }
+    
+    .reserve-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.studio-slide.active p,
+.studio-slide.active .divider,
+.studio-slide.active .reserve-btn {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.studio-slide.active p:nth-of-type(1) { animation-delay: 0.1s; }
+.studio-slide.active p:nth-of-type(2) { animation-delay: 0.2s; }
+.studio-slide.active p:nth-of-type(3) { animation-delay: 0.3s; }
+.studio-slide.active p:nth-of-type(4) { animation-delay: 0.4s; }
+.studio-slide.active .reserve-btn { animation-delay: 0.5s; }
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  opacity: 0;
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.3s; }
+.delay-3 { animation-delay: 0.5s; }
+.delay-4 { animation-delay: 0.7s; }
