@@ -7,12 +7,12 @@
             "request": "launch",
             "port": 8080,
             "pathMappings": {
-                "/xampp/htdocs/project4thyear": "${workspaceFolder}/project4thyear"
+                "/xampp/htdocs/THINKCafe-management": "${workspaceFolder}/THINKCafe-management"
             },
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": ".*",
-                "uriFormat": "http://localhost:8080/project4thyear/home.php"
+                "uriFormat": "http://localhost:8080/THINKCafe-management/home.php"
             }
             },
         {
