@@ -25,6 +25,15 @@ Built using **PHP**, **HTML/CSS**, **JavaScript**, and styled with **Bootstrap**
 
 ---
 
+## 📦 Database Setup
+
+1. Open **phpMyAdmin**
+2. Create a new database named `cafe_db`
+3. Import the file `database/cafe_db.sql` provided in this repository
+4. Configure your `config.php` with your local database credentials
+
+---
+
 ## 💻 Installation Guide
 
 1. ✅ Clone this repository:
